@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="一个丑陋的网站">
 <meta property="og:description" content="用pip安装jupyter提示 12WARNING: You are using pip version 19.1.1, however version 19.2.2 is available.You should consider upgrading via the &apos;pip install --upgrade pip&apos; command.  我版本过低？？这能忍？8说了 升级 pip insta">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T16:45:47.825Z">
+<meta property="og:updated_time" content="2019-08-14T16:51:44.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac安装jupyter心路历程">
 <meta name="twitter:description" content="用pip安装jupyter提示 12WARNING: You are using pip version 19.1.1, however version 19.2.2 is available.You should consider upgrading via the &apos;pip install --upgrade pip&apos; command.  我版本过低？？这能忍？8说了 升级 pip insta">
@@ -399,8 +399,20 @@
 <p>参考<a href="https://blog.csdn.net/u012145252/article/details/82628419" target="_blank" rel="noopener">这位老哥</a>的经验<br>发现一个和pip重复的pip-19.1.1.dist-info文件夹，大概就是因为更新错地方然后出现了死循环，删它！</p>
 <p>然后重新<code>~ pip install --user jupyter</code></p>
 <p>然后！在许多黄黄的WARNING中成功了！！！普天同庆！！策马奔腾！！（希望以后不会有奇奇怪怪的小毛病）</p>
-<p>（话说我还不懂怎么解决下面这个mac自带2.7python即将过期的问题…… 应该到快过期的时候会有大佬出解决方案之类的吧哈哈哈</p>
-<figure class="highlight plain"><figcaption><span>Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.``` )</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">阿 对了 进入以后是按ctrl+c退出 ……</span><br><span class="line"></span><br><span class="line">又是充实的一天呢（才怪）</span><br><span class="line"></span><br><span class="line">好的正准备上传 我发现我又不会用hexo了</span><br><span class="line">***</span><br><span class="line">发布文章 是要先cd到hexo的目录</span><br><span class="line"></span><br><span class="line">然后用 `hexo n &quot;新的博客&quot;`才是阿！ 我一直在家目录新建个什么玩意……</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line">PS：安装不成功这个问题已经纠结了我很久了，今天给它写下来似乎感觉思路会比较清晰一些，中间还有很多奇奇怪怪的步骤不过感觉好像没有什么卵用就没写进来了。总算是搞清楚了，明天开始新的折腾</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line">等等 我刚`pip show pip`了一下</span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line">Name: pip</span><br><span class="line">Version: 19.1.1</span><br><span class="line">Summary: The PyPA recommended tool for installing Python packages.</span><br><span class="line">Home-page: https://pip.pypa.io/</span><br><span class="line">Author: The pip developers</span><br><span class="line">Author-email: pypa-dev@groups.google.com</span><br><span class="line">License: MIT</span><br><span class="line">Location: /Library/Python/2.7/site-packages/pip-19.1.1-py2.7.egg</span><br><span class="line">Requires:</span><br><span class="line">Required-by:</span><br></pre></td></tr></table></figure>
+<p>（话说我还不懂怎么解决下面这个mac自带2.7python即将过期的问题…… 应该到快过期的时候会有大佬出解决方案之类的吧哈哈哈)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DEPRECATION: Python <span class="number">2.7</span> will reach the end of its life on January <span class="number">1</span>st, <span class="number">2020.</span> Please upgrade your Python as Python <span class="number">2.7</span> won't be maintained after that date. A future version of pip will drop support <span class="keyword">for</span> Python <span class="number">2.7</span>.</span><br></pre></td></tr></table></figure>
+
+<p>阿 对了 进入以后是按ctrl+c退出 ……</p>
+<p>又是充实的一天呢（才怪）</p>
+<p>好的正准备上传 我发现我又不会用hexo了</p>
+<hr>
+<p>发布文章 是要先cd到hexo的目录</p>
+<p>然后用 <code>hexo n &quot;新的博客&quot;</code>才是阿！ 我一直在家目录新建个什么玩意……</p>
+<hr>
+<p>PS：安装不成功这个问题已经纠结了我很久了，今天给它写下来似乎感觉思路会比较清晰一些，中间还有很多奇奇怪怪的步骤不过感觉好像没有什么卵用就没写进来了。总算是搞清楚了，明天开始新的折腾</p>
+<hr>
+<p>等等 我刚<code>pip show pip</code>了一下</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Name: pip</span><br><span class="line">Version: <span class="number">19.1</span><span class="number">.1</span></span><br><span class="line">Summary: The PyPA recommended tool <span class="keyword">for</span> installing Python packages.</span><br><span class="line">Home-page: https:<span class="comment">//pip.pypa.io/</span></span><br><span class="line">Author: The pip developers</span><br><span class="line">Author-email: pypa-dev@groups.google.com</span><br><span class="line">License: MIT</span><br><span class="line">Location: /Library/Python/<span class="number">2.7</span>/site-packages/pip<span class="number">-19.1</span><span class="number">.1</span>-py2<span class="number">.7</span>.egg</span><br><span class="line">Requires:</span><br><span class="line">Required-by:</span><br></pre></td></tr></table></figure>
 
 <p>为什么……还是19.1.1版本……</p>
 <p>是我输了……</p>
