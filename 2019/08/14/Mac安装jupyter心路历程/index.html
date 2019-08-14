@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="一个丑陋的网站">
 <meta property="og:description" content="用pip安装jupyter提示 12WARNING: You are using pip version 19.1.1, however version 19.2.2 is available.You should consider upgrading via the &apos;pip install --upgrade pip&apos; command.  我版本过低？？这能忍？8说了 升级 pip insta">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T15:24:37.229Z">
+<meta property="og:updated_time" content="2019-08-14T16:21:35.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac安装jupyter心路历程">
 <meta name="twitter:description" content="用pip安装jupyter提示 12WARNING: You are using pip version 19.1.1, however version 19.2.2 is available.You should consider upgrading via the &apos;pip install --upgrade pip&apos; command.  我版本过低？？这能忍？8说了 升级 pip insta">
@@ -396,7 +396,7 @@
 <p>运行python3，然后import要查看路径的包，再输入包的名称，即可查看安装路径 找到pip所在文件夹</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">~ python3</span><br><span class="line">Python <span class="number">3.6</span><span class="number">.6</span>rc1 (v3<span class="number">.6</span><span class="number">.6</span>rc1:<span class="number">1015e38</span>be4, Jun <span class="number">12</span> <span class="number">2018</span>, <span class="number">01</span>:<span class="number">14</span>:<span class="number">33</span>)</span><br><span class="line">[GCC <span class="number">4.2</span><span class="number">.1</span> Compatible Apple LLVM <span class="number">6.0</span> (clang<span class="number">-600.0</span><span class="number">.57</span>)] on darwin</span><br><span class="line">Type <span class="string">"help"</span>, <span class="string">"copyright"</span>, <span class="string">"credits"</span> <span class="keyword">or</span> <span class="string">"license"</span> <span class="keyword">for</span> more information.</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> pip</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>pip</span><br><span class="line">&lt;module <span class="string">'pip'</span> <span class="keyword">from</span> <span class="string">'/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pip/__init__.py'</span>&gt;</span><br><span class="line">&gt;&gt;&gt;</span><br></pre></td></tr></table></figure>
 
-<p>参考<a href="https://blog.csdn.net/u012145252/article/details/82628419" target="_blank" rel="noopener">这位老哥</a>的经验<br>发现一个和pip重复的pip-19.1.1.dist-info文件夹，删它！</p>
+<p>参考<a href="https://blog.csdn.net/u012145252/article/details/82628419" target="_blank" rel="noopener">这位老哥</a>的经验<br>发现一个和pip重复的pip-19.1.1.dist-info文件夹，大概就是因为更新错地方然后出现了死循环，删它！</p>
 <p>然后重新<code>~ pip install --user jupyter</code></p>
 <p>然后！在许多黄黄的WARNING中成功了！！！普天同庆！！策马奔腾！！（希望以后不会有奇奇怪怪的小毛病）</p>
 <p>（话说我还不懂怎么解决下面这个mac自带2.7python即将过期的问题…… 应该到快过期的时候会有大佬出解决方案之类的吧哈哈哈</p>
@@ -406,7 +406,9 @@
 <p>好的正准备上传 我发现我又不会用hexo了</p>
 <hr>
 <p>发布文章 是要先cd到hexo的目录</p>
-<p> 然后用 <code>hexo n &quot;新的博客&quot;</code>才是阿！ 我一直在家目录新建个什么玩意……</p>
+<p>然后用 <code>hexo n &quot;新的博客&quot;</code>才是阿！ 我一直在家目录新建个什么玩意……</p>
+<hr>
+<p>PS：安装不成功这个问题已经纠结了我很久了，今天给它写下来似乎感觉思路会比较清晰一些，中间还有很多奇奇怪怪的步骤不过感觉好像没有什么卵用就没写进来了。总算是搞清楚了，明天开始新的折腾</p>
 
       
     </div>
