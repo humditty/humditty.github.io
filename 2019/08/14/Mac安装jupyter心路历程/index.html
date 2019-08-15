@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="一个丑陋的网站">
 <meta property="og:description" content="用pip安装jupyter提示 12WARNING: You are using pip version 19.1.1, however version 19.2.2 is available.You should consider upgrading via the &apos;pip install --upgrade pip&apos; command.  我版本过低？？这能忍？8说了 升级 pip insta">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T16:51:44.915Z">
+<meta property="og:updated_time" content="2019-08-15T07:55:06.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac安装jupyter心路历程">
 <meta name="twitter:description" content="用pip安装jupyter提示 12WARNING: You are using pip version 19.1.1, however version 19.2.2 is available.You should consider upgrading via the &apos;pip install --upgrade pip&apos; command.  我版本过低？？这能忍？8说了 升级 pip insta">
@@ -416,6 +416,13 @@
 
 <p>为什么……还是19.1.1版本……</p>
 <p>是我输了……</p>
+<p>试了一下<code>~ jupyter notebook</code>命令 发现用不了</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/usr/local/bin/jupyter"</span>, line <span class="number">10</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    sys.exit(main())</span><br><span class="line">  File <span class="string">"/Library/Python/2.7/site-packages/jupyter_core/command.py"</span>, line <span class="number">230</span>, <span class="keyword">in</span> main</span><br><span class="line">    command = _jupyter_abspath(subcommand)</span><br><span class="line">  File <span class="string">"/Library/Python/2.7/site-packages/jupyter_core/command.py"</span>, line <span class="number">133</span>, <span class="keyword">in</span> _jupyter_abspath</span><br><span class="line">    <span class="string">'Jupyter command `&#123;&#125;` not found.'</span>.format(jupyter_subcommand)</span><br><span class="line">Exception: Jupyter command `jupyter-notebook` <span class="keyword">not</span> found.</span><br></pre></td></tr></table></figure>
+
+<p>大概意思是2.7的python没有安装 然后用py3找了一下发现确实jupyter装在py3了</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> jupyter</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>jupyter</span><br><span class="line">&lt;module <span class="string">'jupyter'</span> <span class="keyword">from</span> <span class="string">'/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/jupyter.py'</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这就很灵性了…… 以后只能用 <code>~python -m IPython notebook</code>进入了</p>
 
       
     </div>
