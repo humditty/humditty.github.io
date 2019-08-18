@@ -1638,7 +1638,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #edf422;
+  background: #ffff2d;
 }
 .feed-link,
 .chat {
@@ -2581,4 +2581,24 @@ ul.breadcrumb li+li:last-child {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+body {
+  position: relative;
+  font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  color: #555;
+  background: #ffc0cb;
+}
+a,
+span.exturl {
+  overflow-wrap: break-word;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  background-color: rgba(234,85,85,0.2);
+  color: #d6867b;
+  text-decoration: none;
+  outline: none;
+  border-bottom: 1px solid #999;
+  cursor: pointer;
 }
