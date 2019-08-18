@@ -311,7 +311,7 @@
         
           
         
-        嗯..! 目前共计 4 篇日志。 继续努力。
+        嗯..! 目前共计 5 篇日志。 继续努力。
       </span>
       
 
@@ -326,6 +326,41 @@
           <div class="collection-title">
             <h1 class="archive-year" id="archive-year-2019">2019</h1>
           </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+          <a class="post-title-link" href="/2019/08/18/Hexo的next主题配置/" itemprop="url">
+            
+              <span itemprop="name">Hexo的next主题配置</span>
+            
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-08-18T21:55:21+08:00" content="2019-08-18">
+          08-18
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
         
         
 
@@ -442,7 +477,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -541,8 +576,26 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">The whole blog contains 1.6k words</span>
+  <span class="post-count">The whole blog contains 1.9k words</span>
 </div>
+
+<span id="timeDate">????...</span><span id="times">?????...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("07/28/2019 14:00:00");//?????????????????? 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = " | And it has run "+dnum+" days "; 
+        document.getElementById("times").innerHTML = hnum + " hours " + mnum + " mins " + snum + " s"; 
+    } 
+setInterval("createtime()",250);
+</script>
         
 <div class="busuanzi-count">
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
