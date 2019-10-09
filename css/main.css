@@ -1638,7 +1638,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1b6c12;
+  background: #d1b929;
 }
 .feed-link,
 .chat {
@@ -2588,7 +2588,7 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: #ffc0cb;
+  background: #c21f30;
 }
 a,
 span.exturl {
@@ -2601,4 +2601,15 @@ span.exturl {
   outline: none;
   border-bottom: 1px solid #999;
   cursor: pointer;
+}
+.site-subtitle {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #c21e30;
+}
+#标题区,
+.site-meta {
+  padding: 20px 0;
+  color: #fff;
+  background: #d11a2d;
 }
