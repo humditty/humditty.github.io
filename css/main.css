@@ -1638,7 +1638,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4ae7ff;
+  background: #ffdd2b;
 }
 .feed-link,
 .chat {
@@ -2607,4 +2607,19 @@ span.exturl {
   padding: 20px 0;
   color: #fff;
   background: #d11a2d;
+}
+.site-subtitle {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #fff;
+}
+#选中框,
+::selection {
+  background: #a61b29;
+  color: #fff;
+}
+#底部文字,
+.footer {
+  font-size: 14px;
+  color: #f7f7f7;
 }
