@@ -1638,7 +1638,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d1b929;
+  background: #4ae7ff;
 }
 .feed-link,
 .chat {
@@ -2601,11 +2601,6 @@ span.exturl {
   outline: none;
   border-bottom: 1px solid #999;
   cursor: pointer;
-}
-.site-subtitle {
-  margin-top: 10px;
-  font-size: 13px;
-  color: #c21e30;
 }
 #标题区,
 .site-meta {
