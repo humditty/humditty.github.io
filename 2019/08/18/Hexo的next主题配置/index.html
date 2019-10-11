@@ -110,17 +110,17 @@
   </script>
 
 
-  <meta name="description" content="使用浏览器F12进行自定义设置在Google Chrome浏览器中按下F12进入调试模式 修改相应代码后拷贝所修改区域进入 hexo/themes/.../souce/css 中 main.styl文件夹黏贴修改。hexo s可进行实时预览。 网站底部字数统计切换到根目录下，然后运行如下代码 $ npm install hexo-wordcount --save 然后在/themes/next/l">
+  <meta name="description" content="使用浏览器F12进行自定义设置在Google Chrome浏览器中按下F12进入调试模式 修改相应代码后拷贝所修改区域进入 hexo/themes/.../souce/css 中 main.styl文件夹黏贴修改。hexo s可进行实时预览。 为 Hexo 主题 next 添加图片背景我们直接在 NEXT 预留的自定义样式文件 “themes/next/source/css/_custom/cus">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo的next主题配置">
 <meta property="og:url" content="http://yoursite.com/2019/08/18/Hexo的next主题配置/index.html">
 <meta property="og:site_name" content="一个丑陋的网站">
-<meta property="og:description" content="使用浏览器F12进行自定义设置在Google Chrome浏览器中按下F12进入调试模式 修改相应代码后拷贝所修改区域进入 hexo/themes/.../souce/css 中 main.styl文件夹黏贴修改。hexo s可进行实时预览。 网站底部字数统计切换到根目录下，然后运行如下代码 $ npm install hexo-wordcount --save 然后在/themes/next/l">
+<meta property="og:description" content="使用浏览器F12进行自定义设置在Google Chrome浏览器中按下F12进入调试模式 修改相应代码后拷贝所修改区域进入 hexo/themes/.../souce/css 中 main.styl文件夹黏贴修改。hexo s可进行实时预览。 为 Hexo 主题 next 添加图片背景我们直接在 NEXT 预留的自定义样式文件 “themes/next/source/css/_custom/cus">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-10T00:34:34.071Z">
+<meta property="og:updated_time" content="2019-10-11T07:36:51.352Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo的next主题配置">
-<meta name="twitter:description" content="使用浏览器F12进行自定义设置在Google Chrome浏览器中按下F12进入调试模式 修改相应代码后拷贝所修改区域进入 hexo/themes/.../souce/css 中 main.styl文件夹黏贴修改。hexo s可进行实时预览。 网站底部字数统计切换到根目录下，然后运行如下代码 $ npm install hexo-wordcount --save 然后在/themes/next/l">
+<meta name="twitter:description" content="使用浏览器F12进行自定义设置在Google Chrome浏览器中按下F12进入调试模式 修改相应代码后拷贝所修改区域进入 hexo/themes/.../souce/css 中 main.styl文件夹黏贴修改。hexo s可进行实时预览。 为 Hexo 主题 next 添加图片背景我们直接在 NEXT 预留的自定义样式文件 “themes/next/source/css/_custom/cus">
 
 
 
@@ -422,6 +422,12 @@
       
         <h2 id="使用浏览器F12进行自定义设置"><a href="#使用浏览器F12进行自定义设置" class="headerlink" title="使用浏览器F12进行自定义设置"></a>使用浏览器F12进行自定义设置</h2><p>在Google Chrome浏览器中按下F12进入调试模式</p>
 <p>修改相应代码后拷贝所修改区域进入 <code>hexo/themes/.../souce/css</code> 中 main.styl文件夹黏贴修改。hexo s可进行实时预览。</p>
+<h2 id="为-Hexo-主题-next-添加图片背景"><a href="#为-Hexo-主题-next-添加图片背景" class="headerlink" title="为 Hexo 主题 next 添加图片背景"></a>为 Hexo 主题 next 添加图片背景</h2><p>我们直接在 NEXT 预留的自定义样式文件 “themes/next/source/css/_custom/custom（main）.styl” 中添加自己的样式即可, 在自定义样式文件中写入以下代码:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 添加背景图片</span><br><span class="line">body &#123;</span><br><span class="line">  background: url(https://source.unsplash.com/random/1600x900?wallpapers);</span><br><span class="line">  background-size: cover;</span><br><span class="line">  background-repeat: no-repeat;</span><br><span class="line">  background-attachment: fixed;</span><br><span class="line">  background-position: 50% 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改主体透明度</span><br><span class="line">.main-inner &#123;</span><br><span class="line">  background: #fff;</span><br><span class="line">  opacity: 0.8;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改菜单栏透明度</span><br><span class="line">.header-inner &#123;</span><br><span class="line">  opacity: 0.8;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中:</p>
+<p>background: url() 中填写的是背景图片的 url 地址, 这里调用了 <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a> 的 API, 随机选用该网站的高清美图作为博客背景. 该网站所有图片都是免费商用的, 所以无须担心侵权问题;<br>网站 API 还有很多有趣的玩法, 参见: <a href="https://source.unsplash.com" target="_blank" rel="noopener">Documentation</a></p>
+<p>如果你在unsplash网站注册后，可以自行上传图片，并使用网站自动生成的个人照片链接进行使用。</p>
 <h2 id="网站底部字数统计"><a href="#网站底部字数统计" class="headerlink" title="网站底部字数统计"></a>网站底部字数统计</h2><p>切换到根目录下，然后运行如下代码</p>
 <p><code>$ npm install hexo-wordcount --save</code></p>
 <p>然后在<code>/themes/next/layout/_partials/footer.swig</code>文件尾部加上：</p>
@@ -441,6 +447,7 @@
 <p><a href="http://shenzekun.cn/hexo的next主题个性化配置教程.html" target="_blank" rel="noopener">http://shenzekun.cn/hexo的next主题个性化配置教程.html</a> </p>
 <p><a href="https://www.jianshu.com/p/c9de55660d1b" target="_blank" rel="noopener">https://www.jianshu.com/p/c9de55660d1b</a></p>
 <p>live2D：<a href="https://blog.csdn.net/qq_39610915/article/details/90679768" target="_blank" rel="noopener">https://blog.csdn.net/qq_39610915/article/details/90679768</a></p>
+<p><a href="https://blog.diqigan.cn/posts/add-background-picture-for-next.html" target="_blank" rel="noopener">https://blog.diqigan.cn/posts/add-background-picture-for-next.html</a></p>
 
       
     </div>
@@ -652,7 +659,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用浏览器F12进行自定义设置"><span class="nav-number">1.</span> <span class="nav-text">使用浏览器F12进行自定义设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部字数统计"><span class="nav-number">2.</span> <span class="nav-text">网站底部字数统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#来必力评论"><span class="nav-number">3.</span> <span class="nav-text">来必力评论</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用浏览器F12进行自定义设置"><span class="nav-number">1.</span> <span class="nav-text">使用浏览器F12进行自定义设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为-Hexo-主题-next-添加图片背景"><span class="nav-number">2.</span> <span class="nav-text">为 Hexo 主题 next 添加图片背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网站底部字数统计"><span class="nav-number">3.</span> <span class="nav-text">网站底部字数统计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#来必力评论"><span class="nav-number">4.</span> <span class="nav-text">来必力评论</span></a></li></ol></div>
             
 
           </div>
@@ -703,7 +710,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本博客共包含 11.1k 字</span>
+  <span class="post-count">本博客共包含 11.4k 字</span>
 </div>
 
 <span id="timeDate">????...</span><span id="times">?????...</span>
