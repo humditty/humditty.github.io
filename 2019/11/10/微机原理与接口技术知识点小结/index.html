@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="一个丑陋的网站">
 <meta property="og:description" content="零散知识点 处理器定时工作的时间单位从小到大：时钟 &amp;gt; 总线 &amp;gt; 指令周期  IO端口编址方式：独立编址 统一编址（51）    数据总线DB双向，地址总线AB单向，控制总线CB单向（单根）  非压缩性BCD =&amp;gt; 8位2进制如十进制31D表示为：0000 0011 0000 0001通常用于处理ASCLL码  对程序计数器PC的操作 是自动(通过加1)进行的  DATA区（00">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-10T13:33:14.423Z">
+<meta property="og:updated_time" content="2019-11-11T08:46:58.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微机原理与接口技术知识点小结">
 <meta name="twitter:description" content="零散知识点 处理器定时工作的时间单位从小到大：时钟 &amp;gt; 总线 &amp;gt; 指令周期  IO端口编址方式：独立编址 统一编址（51）    数据总线DB双向，地址总线AB单向，控制总线CB单向（单根）  非压缩性BCD =&amp;gt; 8位2进制如十进制31D表示为：0000 0011 0000 0001通常用于处理ASCLL码  对程序计数器PC的操作 是自动(通过加1)进行的  DATA区（00">
@@ -511,6 +511,14 @@
 <td>3. DJNZ</td>
 <td>(Rn) &lt;- (Rn-1)减一不为0，跳转目标地址。若已减到0，结束循环</td>
 </tr>
+<tr>
+<td>* LCALL</td>
+<td>调用子程序</td>
+</tr>
+<tr>
+<td>* RETI</td>
+<td>子程序<strong>最后一条指令</strong>必须是RETI</td>
+</tr>
 </tbody></table>
 <h2 id="位操作"><a href="#位操作" class="headerlink" title="位操作"></a>位操作</h2><table>
 <thead>
@@ -530,6 +538,71 @@
 <tr>
 <td>3. JC/JNC JB/JNB JBC</td>
 <td>位转移指令 判断Cy或bit</td>
+</tr>
+</tbody></table>
+<h2 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h2><h3 id="中断入口"><a href="#中断入口" class="headerlink" title="中断入口"></a>中断入口</h3><table>
+<thead>
+<tr>
+<th>中断源</th>
+<th>入口地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>外部中断0（INT0）</td>
+<td>0003H</td>
+</tr>
+<tr>
+<td>定时器/计数器0（T0）</td>
+<td>000BH</td>
+</tr>
+<tr>
+<td>外部中断1（INT0）</td>
+<td>0013H</td>
+</tr>
+<tr>
+<td>定时器/计数器1（T0）</td>
+<td>001BH</td>
+</tr>
+<tr>
+<td>串行口中断（TX或RX）</td>
+<td>0023H</td>
+</tr>
+</tbody></table>
+<h3 id="定时器-计数器控制寄存器TCON（Timer-Control）"><a href="#定时器-计数器控制寄存器TCON（Timer-Control）" class="headerlink" title="定时器/计数器控制寄存器TCON（Timer Control）"></a>定时器/计数器控制寄存器TCON（Timer Control）</h3><table>
+<thead>
+<tr>
+<th>*</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>位符号</td>
+<td>TF1</td>
+<td>TR1</td>
+<td>TF0</td>
+<td>TR0</td>
+<td>IE1</td>
+<td>IT1</td>
+<td>IE0</td>
+<td>IT0</td>
+</tr>
+<tr>
+<td>英文注释</td>
+<td>Timer1 Overflow</td>
+<td>Timer1 Run</td>
+<td>Timer0 Overflow</td>
+<td>Timer0  Run</td>
+<td>Interrupt External 1 edge flag</td>
+<td>Interrupt 1 Type control bit</td>
+<td>Interrupt External 0 edge flag</td>
+<td>Interrupt 0 Type control bit</td>
 </tr>
 </tbody></table>
 <p>* </p>
@@ -756,7 +829,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#零散知识点"><span class="nav-number">1.</span> <span class="nav-text">零散知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算术运算类"><span class="nav-number">2.</span> <span class="nav-text">算术运算类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制转移类"><span class="nav-number">3.</span> <span class="nav-text">控制转移类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无条件转移"><span class="nav-number">3.1.</span> <span class="nav-text">无条件转移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件转移"><span class="nav-number">3.2.</span> <span class="nav-text">条件转移</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位操作"><span class="nav-number">4.</span> <span class="nav-text">位操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#零散知识点"><span class="nav-number">1.</span> <span class="nav-text">零散知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算术运算类"><span class="nav-number">2.</span> <span class="nav-text">算术运算类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#控制转移类"><span class="nav-number">3.</span> <span class="nav-text">控制转移类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无条件转移"><span class="nav-number">3.1.</span> <span class="nav-text">无条件转移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件转移"><span class="nav-number">3.2.</span> <span class="nav-text">条件转移</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#位操作"><span class="nav-number">4.</span> <span class="nav-text">位操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中断"><span class="nav-number">5.</span> <span class="nav-text">中断</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#中断入口"><span class="nav-number">5.1.</span> <span class="nav-text">中断入口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定时器-计数器控制寄存器TCON（Timer-Control）"><span class="nav-number">5.2.</span> <span class="nav-text">定时器/计数器控制寄存器TCON（Timer Control）</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -807,7 +880,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">本博客共包含 12.7k 字</span>
+  <span class="post-count">本博客共包含 12.9k 字</span>
 </div>
 
 <span id="timeDate">????...</span><span id="times">?????...</span>
