@@ -117,7 +117,7 @@
 <meta property="og:site_name" content="一个丑陋的网站">
 <meta property="og:description" content="零散知识点 处理器定时工作的时间单位从小到大：时钟 &amp;gt; 总线 &amp;gt; 指令周期  IO端口编址方式：独立编址 统一编址（51）    数据总线DB双向，地址总线AB单向，控制总线CB单向（单根）  非压缩性BCD =&amp;gt; 8位2进制如十进制31D表示为：0000 0011 0000 0001通常用于处理ASCLL码  对程序计数器PC的操作 是自动(通过加1)进行的  DATA区（00">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-15T11:49:34.179Z">
+<meta property="og:updated_time" content="2019-12-15T11:50:48.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微机原理与接口技术知识点小结">
 <meta name="twitter:description" content="零散知识点 处理器定时工作的时间单位从小到大：时钟 &amp;gt; 总线 &amp;gt; 指令周期  IO端口编址方式：独立编址 统一编址（51）    数据总线DB双向，地址总线AB单向，控制总线CB单向（单根）  非压缩性BCD =&amp;gt; 8位2进制如十进制31D表示为：0000 0011 0000 0001通常用于处理ASCLL码  对程序计数器PC的操作 是自动(通过加1)进行的  DATA区（00">
@@ -605,7 +605,55 @@
 <td>Interrupt 0 Type control bit</td>
 </tr>
 </tbody></table>
-<h3 id="IE（中断允许控制寄存器）"><a href="#IE（中断允许控制寄存器）" class="headerlink" title="IE（中断允许控制寄存器）"></a>IE（中断允许控制寄存器）</h3><p>用于控制所有中断源的开放或禁止，以及每个中断源是否被允许。<br> *|    7|    6|    5|    4|    3|    2|    1|    0<br>—|—|—|—|—|—|—|—|—<br>位序号|D0|D1|D2|D3|D4|D5|D6|D7|<br>说明|外部中断0|定时/计数0|外部中断1|定时/计数1|串行口中断|定时2溢出中断（8052用）|无效位|全局中断位|<br>位符号（写程序时直接引用）|EX0|ET0|EX1|ET1|ES|–|–|EA|</p>
+<h3 id="IE（中断允许控制寄存器）"><a href="#IE（中断允许控制寄存器）" class="headerlink" title="IE（中断允许控制寄存器）"></a>IE（中断允许控制寄存器）</h3><p>用于控制所有中断源的开放或禁止，以及每个中断源是否被允许。</p>
+<table>
+<thead>
+<tr>
+<th>*</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>位序号</td>
+<td>D0</td>
+<td>D1</td>
+<td>D2</td>
+<td>D3</td>
+<td>D4</td>
+<td>D5</td>
+<td>D6</td>
+<td>D7</td>
+</tr>
+<tr>
+<td>说明</td>
+<td>外部中断0</td>
+<td>定时/计数0</td>
+<td>外部中断1</td>
+<td>定时/计数1</td>
+<td>串行口中断</td>
+<td>定时2溢出中断（8052用）</td>
+<td>无效位</td>
+<td>全局中断位</td>
+</tr>
+<tr>
+<td>位符号（写程序时直接引用）</td>
+<td>EX0</td>
+<td>ET0</td>
+<td>EX1</td>
+<td>ET1</td>
+<td>ES</td>
+<td>–</td>
+<td>–</td>
+<td>EA</td>
+</tr>
+</tbody></table>
 <p>* </p>
 
       
